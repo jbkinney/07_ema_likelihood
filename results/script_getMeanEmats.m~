@@ -1,0 +1,15 @@
+clear all
+close all
+
+% Open muk results
+directory = 'abf1_muk/'
+for k=1:10
+    file_name = [directory 'run_' num2str(k)];
+    load(file_name)
+    N = numel(r.models);
+    for n=1:N
+        models(n) = fixModelGauge(r.models(n))
+    end
+    for n=1:N
+        emats(:,:,n) = models(n).emat;
+        

@@ -1,0 +1,1 @@
+matlab -nosplash -nojvm -nodesktop -nodisplay -r "run go; exit"
